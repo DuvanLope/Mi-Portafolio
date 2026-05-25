@@ -1,3 +1,8 @@
+const cleanPath = window.location.pathname.replace(/index\.html$/, "");
+if (cleanPath !== window.location.pathname) {
+  window.history.replaceState(null, "", cleanPath + window.location.search + window.location.hash);
+}
+
 const email = "rendonfredy31@gmail.com";
 const year = document.querySelector("#year");
 if (year) year.textContent = new Date().getFullYear();
